@@ -2,21 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AuthButton extends StatelessWidget {
-  AuthButton(
-      {required this.iconPath,
-      required this.text,
-      required this.color,
-      required this.textColor});
+  AuthButton({
+    required this.iconPath,
+    required this.text,
+    required this.color,
+    required this.textColor,
+    required this.ontap,
+  });
 
   final String iconPath;
   final String text;
   final Color color;
   final Color textColor;
+  void Function()? ontap;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {},
+      onPressed: ontap,
       style: ButtonStyle(
           shadowColor: MaterialStatePropertyAll(Colors.black),
           elevation: MaterialStatePropertyAll(7),

@@ -1,3 +1,4 @@
+import 'package:edspert/profile.dart';
 import 'package:edspert/widgets/auth_button.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -42,16 +43,23 @@ class LoginPage extends StatelessWidget {
           Column(
             children: [
               AuthButton(
-                  iconPath: "images/google-logo.png",
-                  text: "Masuk Dengan Google",
-                  color: Colors.white,
-                  textColor: Colors.black),
+                iconPath: "images/google-logo.png",
+                text: "Masuk Dengan Google",
+                color: Colors.white,
+                textColor: Colors.black,
+                ontap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Profile()));
+                },
+              ),
               SizedBox(height: 12),
               AuthButton(
-                  iconPath: "images/apple-logo.png",
-                  text: "Masuk Dengan Apple",
-                  color: Colors.black,
-                  textColor: Colors.white),
+                iconPath: "images/apple-logo.png",
+                text: "Masuk Dengan Apple",
+                color: Colors.black,
+                textColor: Colors.white,
+                ontap: () {},
+              ),
             ],
           )
         ],

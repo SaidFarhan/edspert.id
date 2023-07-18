@@ -1,4 +1,4 @@
-import 'package:edspert/login_page.dart';
+import 'package:edspert/profile.dart';
 import 'package:edspert/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Learning App',
       debugShowCheckedModeBanner: false,
-      home: const SplashScreen(),
+      home: const Profile(),
     );
   }
 }
